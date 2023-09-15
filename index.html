@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Тест </h1>
+    <h3>(результат писать без ковычек)</h3>
+
+    <div class="">"2"+ "2"</div>
+    <input type="text" id="q1">
+
+    <div class="">(2 + 2) % 2</div>
+    <input type="text" id="q2">
+
+    <div class="">2 == "2"</div>
+    <input type="text" id="q3">
+
+    <div class="">2 != "2"</div>
+    <input type="text" id="q4">
+
+    <div class="">8 % 3</div>
+    <input type="text" id="q5">
+
+    <div><button id="send">отправить</button></div>
+
+    <script>
+        let buttonSend = document.getElementById('send');
+        buttonSend.addEventListener('click', checkTest);
+
+        function checkTest() {
+            result = 0;
+
+            let q1 = document.getElementById("q1").value;
+            if(q1 == "22"){result++;}
+
+            let q2 = document.getElementById('q2').value;
+            if(q2 == "0"){result++;}
+
+            let q3 = document.getElementById('q3').value;
+            if(q3 == "true"){result++;}
+
+            let q4 = document.getElementById('q4').value;
+            if(q4 == "true"){result++;}
+
+            let q5 = document.getElementById('q5').value;
+            if(q5 == "2"){result++;}
+
+            alert(`количество правильных ответов: ${result} из 5`)
+
+            if( result == 5){
+                alert("Все ответы верные. поздравляю!")
+            }
+        }
+    </script>
+</body>
+</html>
